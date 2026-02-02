@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at top, #ffb6c1, #ff1493);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* QUESTION */
+
+.question {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* BUTTON AREA */
+
+.buttons {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 260px;
+}
+
+/* BUTTONS */
+
+button {
+  padding: 14px 36px;
+  font-size: clamp(1.1rem, 4vw, 1.3rem);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.yes-btn {
+  background: #ff1493;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.yes-btn:active {
+  transform: scale(1.2);
+}
+
+.no-btn {
+  position: absolute;
+  background: white;
+  color: #ff1493;
+  border: 2px solid #ff1493;
+}
+
+/* YES SCREEN */
+
+.yes-screen {
+  text-align: center;
+  color: white;
+}
+
+.heart {
+  width: clamp(160px, 45vw, 220px);
+  height: clamp(160px, 45vw, 220px);
+  background: #ff1493;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: auto;
+  animation: pop 0.6s ease forwards;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ff1493;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -50%;
+  left: 0;
+}
+
+.heart::after {
+  left: 50%;
+  top: 0;
+}
+
+.heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: bold;
+}
+
+.yes-screen p {
+  margin-top: 25px;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+}
+
+/* ANIMATIONS */
+
+@keyframes pop {
+  from {
+    transform: scale(0) rotate(-45deg);
+  }
+  to {
+    transform: scale(1) rotate(-45deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
