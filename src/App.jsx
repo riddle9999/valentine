@@ -15,7 +15,9 @@ export default function App() {
     <div className="app">
       {!yesClicked ? (
         <>
-          <h1 className="question">Will you be my Valentine? NIKSSSS💘</h1>
+          <h1 className="question">
+            Will you be my Valentine? Powered by RIDDLE99
+          </h1>
 
           <div className="buttons">
             <div className="yes-wrapper">
