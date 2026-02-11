@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import backgroundImg from "./assets/background.jpg";
 
 export default function App() {
   const [yesClicked, setYesClicked] = useState(false);
@@ -12,7 +13,14 @@ export default function App() {
   };
 
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={{
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {!yesClicked ? (
         <>
           <h1 className="question">Will you be my Valentine? RIDDLE99's</h1>
